@@ -10,6 +10,7 @@ body {
 }
 /*下面改大標題和底部字體*/
 h1, h2, h3, h4, h5, h6, span, p { font-family: 'Walter Turncoat', cursive; }
+tr { font-family: 'Nunito Sans', sans-serif; }
 
 hr {
     display: block;
@@ -34,6 +35,7 @@ img {
     background-color: #fff; /* change if the mask should have another color then white */
     z-index: 99; /* makes sure it stays on top */
 }
+
 /*這個是進入頁面轉轉轉的動畫的設定*/
 #status {
     width: 200px;
@@ -104,16 +106,15 @@ img.slide {
 	background-color: rgba(255,255,255,0.85);/*改白底背景，a=opacity*/
 	padding-bottom: 200px;
 	padding-left: 15px;
+	padding-right: 15px;
 	padding-top: 0px;
 	left: auto;
 	right: 0px;
 }
 
-
 .templatemo-content-wrapper {
     overflow: hidden;
 }
-/*'Raleway'可以改字體========================================================*/
 
 /*h2指標題，這邊改標題參數*/
 .templatemo-content h2 {
@@ -304,4 +305,132 @@ pre {
     .footer-text {
         margin-left: 0;
     }
+}
+
+.carousel-control {
+    top: 33%;
+}
+/*intro video mobile size*/
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/*小動畫*/
+.ball {
+    position: fixed;  /*固定在網頁上不隨卷軸移動，若要隨卷軸移動用absolute*/
+    top: 78%;  /*設置垂直位置*/
+    left: 0%;  /*設置水平位置，依所放的內容多寡需要自行手動調整*/
+	z-index: 95;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	margin: 0;
+	border-radius: 50%;
+	background-image: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
+	/*width: 100px;
+    height: 100px;
+    background: yellow;
+    display: block;*/  
+}
+.ball:hover {
+	position: fixed;  /*固定在網頁上不隨卷軸移動，若要隨卷軸移動用absolute*/
+    top: 78%;  /*設置垂直位置*/
+    left: 0%;  /*設置水平位置，依所放的內容多寡需要自行手動調整*/
+	z-index: 95;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	margin: 0;
+	border-radius: 50%;
+	background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+	
+	-webkit-animation: MoveToRight 2s /*infinite*/; /* Safari 4.0 - 8.0 */
+	animation: MoveToRight 2s /*infinite*/;
+	/*animation-name: MoveToRight;    /*動畫名稱，需與 keyframe 名稱對應*/
+    /*animation-duration: 2s;    /*動畫持續時間，單位為秒*/
+    /*animation-delay: 0s;    /*動畫延遲開始時間*/
+    /*animation-iteration-count:infinite;    /*動畫次數，infinite 為無限次*/ 
+    
+}
+
+@keyframes MoveToRight {
+    from { left: 0; }
+    to { left: 90%; }
+}
+
+@-webkit-keyframes MoveToRight {
+    from { left: 0; }
+    to { left: 90%; }
+}
+
+.star {
+    position: fixed;  /*固定在網頁上不隨卷軸移動，若要隨卷軸移動用absolute*/
+    top: 78%;  /*設置垂直位置*/
+    left: -1%;  /*設置水平位置，依所放的內容多寡需要自行手動調整*/
+	z-index: 94;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	margin: 0;
+	border-radius: 50%;
+	background-image: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
+	clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); 
+	
+}
+.star:hover {
+	position: fixed;  /*固定在網頁上不隨卷軸移動，若要隨卷軸移動用absolute*/
+    top: 78%;  /*設置垂直位置*/
+    left: -1%;  /*設置水平位置，依所放的內容多寡需要自行手動調整*/
+	z-index: 94;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	margin: 0;
+	border-radius: 100%;
+	background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+	clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+	
+	animation-name: MoveToRight2;    /*動畫名稱，需與 keyframe 名稱對應*/
+    animation-duration: 3s;    /*動畫持續時間，單位為秒*/
+    animation-delay: 2s;    /*動畫延遲開始時間*/
+    /*animation-iteration-count:infinite;    /*動畫次數，infinite 為無限次*/ 
+    
+}
+
+@keyframes MoveToRight {
+    from { left: 0; }
+    to { left: 90%; }
+}
+
+@-webkit-keyframes MoveToRight {
+    from { left: 0; }
+    to { left: 90%; }
+}
+@keyframes MoveToRight2 {
+    from { left: 85%; }
+    to { left: 85%; }
+}
+
+@-webkit-keyframes MoveToRight2 {
+    from { left: 85%; }
+    to { left: 85%; }
+}
+
+
+.table-br {
+	border-color:black;
+	border-width:3px;
+	border-style:solid;
+	padding:5px;
 }
