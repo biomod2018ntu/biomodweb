@@ -97,3 +97,6 @@ function loadGoogleMap(){
         'callback=initialize';
     document.body.appendChild(script);
 }
+
+
+
